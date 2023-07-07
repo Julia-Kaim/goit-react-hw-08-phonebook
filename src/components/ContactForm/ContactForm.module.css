@@ -1,0 +1,30 @@
+.form {
+  background-color: #ccd5ae;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccd5ae;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: -1px 7px 30px -8px rgba(212, 163, 115, 1);
+}
+
+label {
+  margin-bottom: 10px;
+  color: #fefae0;
+}
+
+label:last-child {
+  margin-bottom: 0px;
+}
+
+.inputName {
+  margin-left: 28px;
+  background-color: #fefae0;
+  border: 0 solid black;
+}
+.inputNumber {
+  margin-left: 10px;
+  background-color: #fefae0;
+  border: 0 solid black;
+}

@@ -13,3 +13,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+button {
+  background-color: rgb(250, 237, 205);
+  border: 0 solid black;
+  border-radius: 20px;
+  transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+button:hover {
+  box-shadow: 2px 3px 5px rgb(233, 237, 201);
+}
