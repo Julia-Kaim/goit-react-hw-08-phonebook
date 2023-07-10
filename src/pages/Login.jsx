@@ -1,3 +1,6 @@
+import styles from './Pages.module.css';
+
+
 const { useState } = require('react');
 const { Container, Form, Button } = require('react-bootstrap');
 const { useDispatch } = require('react-redux');
@@ -22,16 +25,6 @@ const Login = () => {
         throw new Error();
     }
   };
-  // const handleOnSubmit = evt => {
-  //   evt.preventDefault();
-  //   dispatch(loginThunk({ email, password }))
-  //     .unwrap()
-  //     .then(() => {
-  //       setEmail('');
-  //       setPassword('');
-  //     })
-  //     .catch(() => alert('Please enter all input'));
-  // };
 
   const handleOnSubmit = event => {
     event.preventDefault();
@@ -71,7 +64,7 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <Button bg="black" variant="dark" className="d-flex " type="submit">
+        <Button className={styles.Button} type="submit">
           Log in
         </Button>
       </Form>

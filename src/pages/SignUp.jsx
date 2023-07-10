@@ -1,5 +1,6 @@
 import { Button, Container, Form } from 'react-bootstrap';
 import { signUpThunk } from 'redux/user/userThunk';
+import styles from './Pages.module.css';
 const { useDispatch } = require('react-redux');
 const { useState } = require('react');
 
@@ -75,7 +76,7 @@ const SignUp = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <Button bg="black" variant="dark" type="submit">
+        <Button className={styles.Button} type="submit">
           Log in
         </Button>
       </Form>

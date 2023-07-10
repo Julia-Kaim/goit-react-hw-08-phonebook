@@ -1,7 +1,9 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
-import css from '../components/App.module.css';
+import styles from '../components/App.module.css';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
+import { selectContacts } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 
 const { useEffect } = require('react');
 const { useDispatch, useSelector } = require('react-redux');
@@ -9,8 +11,8 @@ const { getContactsThunk } = require('redux/contactsThunk');
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.items);
-  const filtered = useSelector(state => state.filter);
+  const contacts = useSelector(selectContacts);
+  const filtered = useSelector(selectFilter);
   const filterContact = e => {
     const filteredContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(filtered.toLowerCase())
@@ -21,7 +23,7 @@ const Contacts = () => {
     dispatch(getContactsThunk);
   }, [dispatch]);
   return (
-    <div className={css.container}>
+    <div className={styles.container}>
       <ContactForm />
       <Filter />
       <ContactList listContact={filterContact()} />

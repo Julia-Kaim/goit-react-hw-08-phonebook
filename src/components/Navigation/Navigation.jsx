@@ -2,6 +2,8 @@ import InfoUser from 'components/InfoUser/InfoUser';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import styles from './Navigation.module.css';
+
 const { useSelector } = require('react-redux');
 const { selectToken, selectUser } = require('redux/user/userSelect');
 // const user = useSelector(selectUser);
@@ -11,7 +13,7 @@ const Navigation = () => {
   console.log(user);
   return (
     <>
-      <Navbar bg="black" variant="dark">
+      <Navbar navbar-light bg-light>
         <Container>
           <Navbar.Brand href="/goit-react-hw-08-phonebook/contacts">
             Phonebook
@@ -39,7 +41,7 @@ const Navigation = () => {
         {user ? (
           <h1>Welcome {user.name} your contacts</h1>
         ) : (
-          <h1>Welcome guest please login</h1>
+          <h1 className={styles.Header}>Welcome guest please login</h1>
         )}
       </Container>
     </>

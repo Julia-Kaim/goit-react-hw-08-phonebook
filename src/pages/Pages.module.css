@@ -1,0 +1,9 @@
+.Button {
+  background-color: #d8829d;
+  border: 0;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Button:hover {
+  background-color: #edd83d;
+}
